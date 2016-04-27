@@ -54,6 +54,7 @@
 html, body {
   height: 100%;
   overflow: hidden;
+  background-color: black;
 }
 
 .splash {
@@ -180,7 +181,7 @@ html, body {
   transition: transform 0.4s ease;
   transition: transform 0.4s ease, -webkit-transform 0.4s ease;
   position: absolute;
-  bottom: 0px;
+  bottom: 50px;
   z-index: 1;
   width: 100%;
 }
@@ -586,7 +587,7 @@ html, body {
   border-top: 1px solid rgba(0, 0, 0, 0.4);
   z-index: 4;
   position: relative;
-  order: -1;
+  /*order: -1;*/
 }
 .home .nav span img {
   height: 40px;
