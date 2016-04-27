@@ -322,7 +322,7 @@ html, body {
   background: url("http://s32.postimg.org/9duojo745/grid.png"), -webkit-linear-gradient(70deg, #020c0b, #0c272b, #497567);
   background: url("http://s32.postimg.org/9duojo745/grid.png"), linear-gradient(20deg, #020c0b, #0c272b, #497567);
   background-position: 25px 50px, top left;
-  background-blend-mode: soft-light;
+  background-blend-mode: multiply;
   background-repeat: repeat, no-repeat;
   background-size: auto, cover;
   background-attachment: local, fixed;
