@@ -1,0 +1,452 @@
+*
+   box-sizing: border-box
+
+$Dark: #020C0B
+$dark: #0E2423
+$med: #0C272B
+$light: #1E4B4A
+$Light: #497567
+$accent: #3D6940
+$glow: #1E482F
+$txtDark: #2C423D
+
+@import url(https://fonts.googleapis.com/css?family=Orbitron:400,700,500,900)
+.noshow
+   opacity: 0
+   transform: translateX(100%)
+.orb
+   font-family: 'Orbitron', sans-serif
+.orb-h
+   font-family: 'Orbitron', sans-serif
+   font-weight: 900
+.orb-l
+   font-family: 'Orbitron', sans-serif
+   font-weight: 400
+.material-icons.md-18  
+   font-size: 18px
+.material-icons.md-24  
+   font-size: 24px
+.material-icons.md-36 
+   font-size: 36px
+.material-icons.md-48 
+   font-size: 48px
+#menuBtn
+   transition: transform 0.3s ease
+.spin
+   transform: rotate(270deg)
+
+body
+   height: 100vh
+   width: 100vw
+   overflow: hidden
+.splash
+   height: 100vh
+   width: 100vw
+   display: flex
+   flex-direction: column
+   justify-content: center
+   align-items: center
+   padding: 10px
+   z-index: 6
+   position: relative
+   transition: all 0.5s ease-in-out
+   .title
+      text-align: center
+      font-size: 7vmin
+      color: white
+      animation: fadeIn 1s ease-out 2s both
+      text-shadow: 0.5em 0.5em 0px rgba(0,0,0,0.3)
+      h1
+         margin: 0
+
+   button
+      background: transparent
+      color: white
+      border: 1px solid white
+      font-size: 5vmin
+      font-weight: 300
+      animation: fadeIn 1s ease-out 2s both, up 1s ease-out 2s both
+.logo
+   width: 100%
+   max-width: 400px
+   position: relative
+   padding-bottom: 100%
+   div
+      position: absolute
+      top: 0
+      left: 0
+      opacity: 0
+      overflow: hidden
+      img
+         width: 100%
+   .bl
+      animation: fadeIn 1s ease-in-out 1s both
+   .br
+      animation: fadeIn 1s ease-in-out 1.5s both
+   .tl
+      animation: fadeIn 1s ease-in-out 0.5s both
+   .tr
+      animation: fadeIn 1s ease-in-out 0s both
+   .p
+      animation: fadeIn 1s ease-out 2.5s both
+   .in
+   .out
+      animation: fillUp 2s linear 0s both
+      opacity: 1
+.glow
+   color: white
+   text-shadow: 0px 0px 10px $glow
+   
+.home
+   width: 100vw
+   height: 100vh
+   position: absolute
+   top: 0
+   left: 0
+   display: flex
+   flex-direction: column
+   justify-content: space-between
+   overflow: hidden
+   .cart.show
+      transform: translateY(0)
+   .cart
+      transform: translateY(100%)
+      transition: transform 0.4s ease
+      position: absolute
+      bottom: 50px
+      z-index: 1
+      width: 100%
+      .mdl-checkbox.is-checked.mdl-checkbox__tick-outline
+         background-color: $Light
+
+      .mdl-checkbox.is-checked .mdl-checkbox__tick-outline
+         border: 2px solid $Light
+      span.header
+         display: flex
+         justify-content: space-between
+         padding: 10px
+         background-color: $dark
+         h4
+            color: $Light
+            margin: 0
+      table
+         width: 100%
+   .menu.show
+      transform: translateX(0%)
+      box-shadow: 0px 30px 30px rgba(0,0,0,1)
+   .menu
+      transform: translateX(-100%)
+      transition: transform 0.4s ease
+      width: 80vw
+      height: calc(100% - 50px)
+      position: absolute
+      background: #2E2E2E
+      z-index: 4
+      overflow: hidden
+      &:after
+         content: ""
+         position: absolute
+         height: 100%
+         width: 100%
+         right: -20px
+         top: 0
+         background-color: red
+      div.show
+         transform: translateX(0%)
+         transition: 0.5s transform ease
+         z-index: 2
+      div
+         z-index: 1
+         transform: translateX(100%)
+         transition: 0.5s transform 1s ease
+         position: absolute
+         background-color: #2E2E2E
+         top: 0
+         right: 0
+         display: flex
+         flex-direction: column
+         text-align: right
+         height: 100%
+         color: white
+         width: 100%
+         h3
+            width: 100%
+            margin: 0
+            padding: 15px 20px
+            background-color: $dark
+            border-bottom: 1px solid rgba(0,0,0,0.3)
+            a
+               float: left
+               background-color: transparent
+               margin: 0
+               padding: 0
+               height: 100%
+               display: flex
+               align-items: center
+               justify-content: center
+
+               i
+                  color: $Light
+         #products
+            border-bottom: 1px solid rgba(0,0,0,0.3)
+            color: white
+         a
+            padding: 15px 20px
+            color: $Light
+            h5
+               margin: 0
+
+      .main
+      .productsmenu
+         #mainmenu
+            margin: 0 0
+            padding: 0
+         a
+            margin-bottom: 20px
+            color: white
+            
+   .content
+      background: url('http://s32.postimg.org/9duojo745/grid.png') ,linear-gradient(20deg, #020c0b , #0c272b , #497567)
+      background-position: 25px 50px, top left
+      background-blend-mode: soft-light
+      background-repeat: repeat, no-repeat
+      background-size: auto, cover
+      background-attachment: local, fixed
+      width: 100%
+      height: 100%
+      overflow-y: scroll
+      -webkit-overflow-scrolling: touch
+      &:before
+         content: ""
+         position: absolute
+         height: 100%
+         width: 100%
+         top: 0
+         left: 0
+         background-image: url('http://s32.postimg.org/9mrw1aryd/crye_logolgwhite.png')
+         background-position: center
+         background-repeat: no-repeat
+         background-size: 300px
+         opacity: 0.4
+         z-index: 0
+      .title
+         h2
+            text-align: center
+            background: none
+            background-color: rgba(0,0,0,0.5)
+            margin: 0
+            padding: 15px
+            
+      .carousel
+         height: 450px
+         width: 100%
+         overflow: hidden
+         display: flex
+         position: relative
+         justify-content: space-between
+         align-items: center
+         a.handle
+            position: relative
+            z-index: 3
+            color: white
+            margin: 0
+         .item.show
+            transform: translateX(0)
+            opacity: 1
+         .item
+            height: 450px
+            width: 100%
+            top: 0
+            left: 0
+            overflow: hidden
+            position: absolute
+            transform: translateX(100%)
+            opacity: 0
+            transition: all 0.4s ease-in-out
+            img
+               position: absolute
+               top: 0
+               height: 450px
+               // mix-blend-mode: soft-light
+            button
+               background: $dark
+               color: white
+               font-size: 5vmin
+               font-weight: 300
+               animation: fadeIn 0.3s ease-out 0s both
+               border-radius: 0
+               position: absolute
+               right: 5px
+               bottom: 5px
+            .caption
+               position: absolute
+               color: white
+               text-shadow: 0px 0px 10px rgba(0,0,0,0.9)
+               text-align: right
+            span.new
+               position: absolute
+               transform: rotate(-45deg)
+               background-color: $dark
+               color: $Light
+               height: 100px
+               font-size: 1.5em
+               padding: 0px 50px
+               padding-top: 75px
+               top: -50px
+               left: -75px
+         .fs2
+            img
+               right: -120px
+            button
+               position: absolute
+               right: 5px
+               bottom: 5px
+            .caption
+               top: 255px
+               right: 5px
+               color: white
+         .atx
+            img
+               right: -150px
+            button
+               position: absolute
+               right: 10px
+               bottom: 5px
+            .caption
+               top: 250px
+               right: 5px
+               color: white
+      .products
+         padding: 5px
+         display: flex
+         flex-direction: column
+         justify-content: center
+         position: relative
+         margin-top: 40px
+      .products.profile
+         text-align: center
+         h2
+            margin: 20px 0px
+            margin-bottom: 0
+         .item
+            position: relative
+            border: 1px solid $accent
+            padding: 5px
+            box-shadow: 0px 3px 20px $glow
+            margin-bottom: 50px
+            h1
+               position: absolute
+               bottom: 0
+               right: 0
+               background-color: rgba(14,36,35,1)
+               padding: 5px 15px
+               opacity: 0.7
+            img
+               width: 100%
+         .item:nth-of-type(2n)
+            h1
+               margin-bottom: 0
+         .item:nth-of-type(3n)
+            h1
+               left: 0
+               right: initial
+               top: 30px
+               bottom: initial
+               
+      .products.category
+         text-align: center
+         h2
+            margin: 20px 0px
+            margin-bottom: 0
+         .item
+            position: relative
+            border: 1px solid $accent
+            padding: 5px
+            box-shadow: 0px 3px 20px $glow
+            margin-bottom: 20px
+            h1
+               background-color: rgba(14,36,35,0.4)
+               padding: 5px 15px
+               opacity: 1
+               margin: 0
+            img
+               width: 100%
+         .item:nth-of-type(2n)
+            h1
+               margin-bottom: 0
+         .item:nth-of-type(3n)
+            h1
+               left: 0
+               right: initial
+               top: 30px
+               bottom: initial
+      footer
+         width: 100%
+         margin-top: 100px
+         background-color: rgba(0,0,0,0.6)
+         display: flex
+         flex-direction: column
+         justify-content: space-between
+         align-items: center
+         padding: 20px 20px
+         span
+            text-align: center
+            margin: 10px
+            color: white
+            font-size: 11px
+         
+            
+   .nav
+      width: 100%
+      height: 55px
+      background-color: $dark
+      display: flex
+      justify-content: space-between
+      align-items: center
+      border-top: 1px solid rgba(0,0,0,0.4)
+      z-index: 4
+      position: relative
+      span
+         img
+            height: 40px
+      a
+         background-color: transparent
+         margin: 0
+         padding: 0
+         height: 100%
+         display: flex
+         align-items: center
+         justify-content: center
+         transition: all 0.4s ease
+         i
+            color: $Light
+      
+   
+         
+.grad-bg
+   background: linear-gradient(4deg, #020c0b, #0c272b, #497567), url('http://blog.spoongraphics.co.uk/wp-content/uploads/2010/camo-patterns/Urban-Camo.jpg')
+   background-size: 600% 600%, auto auto
+   animation: gradient 4s ease-out
+   background-blend-mode: multiply
+   
+@keyframes fadeIn
+   0%
+      opacity: 0
+   100%
+      opacity: 1
+@keyframes fillUp
+   0%
+      height: 0%
+   100%
+      height: 100%
+@keyframes up
+   0%
+      transform: translateY(2em)
+   100%
+      transform: translateY(0)
+      
+@keyframes gradient 
+   0%
+      background-position: 0% 100%
+   100% 
+      background-position: 0% 0%
